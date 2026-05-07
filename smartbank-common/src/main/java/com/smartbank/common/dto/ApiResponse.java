@@ -1,7 +1,5 @@
 package com.smartbank.common.dto;
 
-package com.smartbank.common.dto;
-
 import java.time.LocalDateTime;
 
 public class ApiResponse<T> {

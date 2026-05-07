@@ -1,0 +1,24 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: smartbank-config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/Ta-nia/smartbank-config-repo.git
+          default-label: main
+          clone-on-start: true
+          timeout: 10
+          basedir: ${java.io.tmpdir}/smartbank-config-cache
+      
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, metrics, info
+  endpoint:
+    health:
+      show-details: always
+            
